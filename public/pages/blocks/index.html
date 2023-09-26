@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K3JCF44');</script>
+        <!-- End Google Tag Manager -->
+        <title>Appblocks - Blocks</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Appblocks">
+        <meta name="keywords" content="Appblocks, Neoito">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <link href="/assets/css/styles.css" rel="stylesheet">
+        <link href="/assets/css/main.css" rel="stylesheet">
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> -->
+    </head>
+    <body class="dark:bg-[#0A0A0A]">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3JCF44"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <header id="nav-header" class="w-full fixed top-0 left-0 z-50 border-b border-ab-gray-medium bg-white">
+  <div
+    class="max-w-7xl w-full mx-auto px-4 md:px-6 flex flex-wrap items-center justify-between md-lt:py-4 md:min-h-[80px] py-2 relative">
+    <a href="/" class="focus:outline-none flexa-medium flex items-center space-x-2 md:mr-2"><img width="68" height="42" class="max-w-[68px]" src="../../assets/images/logo.svg" alt="Logo"><img width="115" height="16" class="md-lt:hidden" src="../../assets/images/logo-txt.svg" alt="Logo Text"></a>
+    <button onclick="showmenu(this)" type="button"
+      class="inline-flex items-center justify-center p-2 ml-3 md:hidden focus:outline-none h-9"
+      aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <span class="hamburger-icon"></span>
+    </button>
+    <div id="navbar-responsive"
+      class="nav-menu-wrapper w-full md-lt:basis-full top-[72px] left-0 md:flex items-center md:w-auto md:space-x-4 md-lt:overflow-hidden">
+      <ul
+        class="flex flex-col md:py-2 my-3 md:flex-row items-center md-lt:space-y-5 md:space-x-4 md:my-0 text-base flexa-medium">
+        <li>
+          <a href="https://docs.appblocks.com/" target="_blank" class="block hover:underline underline-offset-1 text-ab-black lg:mr-1.5">Docs</a>
+        </li>
+        <li>
+          <a href="https://discord.gg/b7YSVvHp2x" target="_blank" class="block hover:underline underline-offset-1 text-ab-black lg:mr-1.5">Join Discord</a>
+        </li>
+        
+         
+        
+        <li>
+          <a href="/pages/blocks" class="flex items-center justify-center py-2 px-5 bg-secondary rounded-full text-white hover:opacity-90">What the T#CH?!</a>
+        </li>
+        <li>
+          <a href="https://spaces.appblocks.com/" target="_blank" class="flex items-center relative justify-center py-2 px-5 bg-primary rounded-full text-white hover:opacity-90">
+            Start Developing <img class="absolute -top-2.5 -right-2.5" src="../../assets/images/icons/beta-sticker.svg" alt="Beta"/>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<script>
+  function showmenu() {
+    document.getElementById("nav-header").classList.toggle("expanded-nav");
+    if(document.getElementById("nav-header").classList.contains("expanded-nav")){
+      document.body.style.overflowY = "hidden";
+    }
+    else{
+      document.body.style.overflowY = "auto";
+    }
+  }
+</script>
+        
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<div class="min-h-[calc(100vh-208px)] w-full float-left pt-[72px] md:pt-[80px]">
+  
+<section class="w-full float-left primary-gradient-box">
+    <div class="max-w-7xl w-full mx-auto flex items-center min-h-[320px] px-4 md:px-6 py-6 banner-right-icon-block">
+        <div class="max-w-2xl w-full float-left">
+            <p class="flexa-bold text-white text-3xl">
+                Build web applications</p>
+            <p class="flexa-bold text-white mt-4 text-lg md:text-5xl md:!leading-[64px]">
+                the world can build upon, Block by Block!</p>
+        </div>
+    </div>
+</section>
+
+
+  <section class="w-full float-left py-8 md:py-20">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix">
+      <div class="w-full mx-auto flex relative mb-20">
+        <img
+          class="max-w-full mx-auto"
+          src="../../assets/images/icons/blocks-graphics.svg"
+          alt=""
+        />
+      </div>
+      <div class="max-w-[910px] mx-auto text-center mb-6">
+        <p class="zirkon-medium text-xl text-ab-black mb-4 tracking-wider">
+          APPBLOCKS
+        </p>
+        <h3
+          class="text-xl md:text-5xl md:leading-[58px] flexa-bold text-ab-black py-2"
+        >
+          What are blocks?
+        </h3>
+        <p class="mt-4 zirkon-medium md:text-2xl text-sm text-ab-black">
+          A unit of an app which solves a business use case with <br/>it’s code and contract
+        </p>
+      </div>
+      <div
+        class="w-full float-left grid grid-cols-1 md:grid-cols-3 items-start gap-6 mt-4"
+      >
+        
+        <div class="w-full float-left flex flex-col items-start">
+          <p
+            class="w-full float-left mt-5 zirkon-regular text-sm md:text-base text-ab-black"
+          >
+            Reusing common business use cases in the same or multiple apps happens when building applications. A block is the basic unit of an app that solves a business use case.
+          </p>
+        </div>
+        
+        <div class="w-full float-left flex flex-col items-start">
+          <p
+            class="w-full float-left mt-5 zirkon-regular text-sm md:text-base text-ab-black"
+          >
+            From a developer&#39;s perspective, a block encases any specific functionality. Building a block or reusing it is as easy as writing an ordinary function.
+          </p>
+        </div>
+        
+        <div class="w-full float-left flex flex-col items-start">
+          <p
+            class="w-full float-left mt-5 zirkon-regular text-sm md:text-base text-ab-black"
+          >
+            Each block has a type for the kind of functionality it performs. The block types are UI Blocks (UI-Element Blocks and UI-Container Blocks), Function Blocks, Shared Blocks and Package Blocks.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-8 md:py-20">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix">
+      <div
+        class="w-full float-left grid grid-cols-1 md:grid-cols-2 items-center gap-4"
+      >
+        <div class="w-full float-left md:max-w-[480px] py-5">
+          <p class="zirkon-medium text-xl text-ab-black mb-4 tracking-wider">
+            TYPES OF BLOCKS
+          </p>
+          <h3
+            class="text-xl md:text-5xl md:leading-[58px] flexa-bold text-ab-black"
+          >
+            Blocks come in <br />all <span class='primary-gradient-text'>shapes</span> and <span class='text-primary'>sizes</span>
+          </h3>
+          <p class="mt-4 zirkon-regular text-sm md:text-base text-ab-black/80">
+            There’s always a block to play around with. Code away in an opinionated architecture, block by block, and improve the functionality of your app with ease.
+          </p>
+          <div class="mt-4 md:mt-5">
+            <a
+              href="https://docs.appblocks.com/"
+              target="_blank"
+              class="text-primary text-xl flexa-medium cursor-pointer hover:underline"
+              >Check Docs</a
+            >
+          </div>
+        </div>
+        <div class="float-right text-right relative">
+          <img
+            class="max-w-full inline-flex"
+            src="../../assets/images/icons/blocks-shape.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-8 md:py-20">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix">
+      <div class="w-full float-left flex md-lt:flex-col justify-between">
+        <div
+          class="float-left relative flex md-lt:flex-col md-lt:order-2 md:pr-10"
+        >
+          <div
+            class="block-slider-pagination float-left flex-shrink-0 w-full md:!w-[56px] flex md:flex-col md-lt:justify-center md:!space-y-12 items-center relative"
+          ></div>
+        </div>
+        <div class="float-left flex-grow max-w-[1024px] overflow-hidden flex">
+          <div class="w-full blocks-swiper float-left overflow-hidden">
+            <div class="swiper-wrapper">
+              
+              <div class="swiper-slide w-full bg-white !flex items-center">
+                <div class="w-full flex sm:space-x-16">
+                  <div
+                    class="w-full float-left relative md:flex hidden md:max-w-[480px]"
+                  >
+                    <img class="mx-auto" src="../../assets/images/icons/ui-block.svg" alt="" />
+                  </div>
+                  <div class="w-full float-left md:max-w-[480px] py-5">
+                    <div class="float-left rounded-full mb-4 md:mb-8 pl-2">
+                      <img
+                        class="max-w-[64px]"
+                        src="../../assets/images/icons/block-cube.svg"
+                        alt=""
+                      />
+                    </div>
+                    <h3
+                      class="text-xl md:text-3xl flexa-bold text-ab-black clear-both"
+                    >
+                      UI Block
+                    </h3>
+                    <p
+                      class="mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+                    >
+                       UI Block is a frontend Block developed for browser runtimes. It includes UI Elements, which are reusable UI components, and Container Blocks, which orchestrate the elements and handle routing and layout. UI Blocks are React-based and follow Webpack Module Federation. Container Blocks pull and render remote element Blocks, combining bundles from remote servers at runtime to render the app.
+                    </p>
+                    <div class="mt-4 md:mt-6 flex flex-wrap">
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-1.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-2.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-3.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide w-full bg-white !flex items-center">
+                <div class="w-full flex sm:space-x-16">
+                  <div
+                    class="w-full float-left relative md:flex hidden md:max-w-[480px]"
+                  >
+                    <img class="mx-auto" src="../../assets/images/icons/fn-block.svg" alt="" />
+                  </div>
+                  <div class="w-full float-left md:max-w-[480px] py-5">
+                    <div class="float-left rounded-full mb-4 md:mb-8 pl-2">
+                      <img
+                        class="max-w-[64px]"
+                        src="../../assets/images/icons/block-cube.svg"
+                        alt=""
+                      />
+                    </div>
+                    <h3
+                      class="text-xl md:text-3xl flexa-bold text-ab-black clear-both"
+                    >
+                      Function Block
+                    </h3>
+                    <p
+                      class="mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+                    >
+                      Fn Blocks are the backend API Blocks. Each of these blocks is supposed to be mutually exclusive.<br /> Every Fn Block will have a specific URL to invoke it and in practical scenarios, all the Fn Blocks in an app will be stitched together and run in a single instance on the server.
+                    </p>
+                    <div class="mt-4 md:mt-6 flex flex-wrap">
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-1.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-2.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-3.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide w-full bg-white !flex items-center">
+                <div class="w-full flex sm:space-x-16">
+                  <div
+                    class="w-full float-left relative md:flex hidden md:max-w-[480px]"
+                  >
+                    <img class="mx-auto" src="../../assets/images/icons/shared-block.svg" alt="" />
+                  </div>
+                  <div class="w-full float-left md:max-w-[480px] py-5">
+                    <div class="float-left rounded-full mb-4 md:mb-8 pl-2">
+                      <img
+                        class="max-w-[64px]"
+                        src="../../assets/images/icons/block-cube.svg"
+                        alt=""
+                      />
+                    </div>
+                    <h3
+                      class="text-xl md:text-3xl flexa-bold text-ab-black clear-both"
+                    >
+                      Shared Block
+                    </h3>
+                    <p
+                      class="mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+                    >
+                      In both frontend and backend, there can be some pieces of code that may be shared which are most probably for utility methods or for data models. Eg, function to find the age of a person from dob/ date filter and so on. These blocks are called Shared Blocks.
+                    </p>
+                    <div class="mt-4 md:mt-6 flex flex-wrap">
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-1.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-2.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-3.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide w-full bg-white !flex items-center">
+                <div class="w-full flex sm:space-x-16">
+                  <div
+                    class="w-full float-left relative md:flex hidden md:max-w-[480px]"
+                  >
+                    <img class="mx-auto" src="../../assets/images/icons/package-block.svg" alt="" />
+                  </div>
+                  <div class="w-full float-left md:max-w-[480px] py-5">
+                    <div class="float-left rounded-full mb-4 md:mb-8 pl-2">
+                      <img
+                        class="max-w-[64px]"
+                        src="../../assets/images/icons/block-cube.svg"
+                        alt=""
+                      />
+                    </div>
+                    <h3
+                      class="text-xl md:text-3xl flexa-bold text-ab-black clear-both"
+                    >
+                      Package Block
+                    </h3>
+                    <p
+                      class="mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+                    >
+                      When multiple blocks are combined together into a unit, such an arrangement is called a Package Block. UI, Fn, and shared Blocks have their own repositories. They are the building blocks of an application. Once all the Blocks are stitched together, we build a configuration that is a snapshot of how the apps are composed.
+                    </p>
+                    <div class="mt-4 md:mt-6 flex flex-wrap">
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-1.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-2.svg"
+                        alt=""
+                      />
+                      <img
+                        class="max-w-[32px] flex-shrink-0 mr-4"
+                        src="../../assets/images/icons/tech-icon-3.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-8 md:py-20">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix">
+      <div class="max-w-[910px] mx-auto text-center">
+        <p class="zirkon-medium text-xl text-ab-black mb-4 tracking-wider">
+          WHY APPBLOCKS?
+        </p>
+        <h3
+          class="text-xl md:text-5xl md:leading-[58px] flexa-bold text-ab-black"
+        >
+          Composable Enterprise via Composable Software
+        </h3>
+        <p class="mt-4 zirkon-regular text-sm md:text-base text-ab-black">
+          Using interchangeable building blocks to create, innovate and adapt business operations, <br/>enabling us to respond to external or internal factors.
+        </p>
+        <div
+          class="w-full grid grid-cols-1 md:grid-cols-3 items-center gap-4 mt-12 md:mt-20"
+        >
+          
+          <div class="w-full float-left flex flex-col items-center">
+            <img
+              class="mb-3 flex-shrink-0"
+              src="../../assets/images/icons/faster-icon.svg"
+              alt=""
+            />
+            <h4
+              class="flexa-bold text-2xl md:text-[32px] leading-9 primary-gradient-text"
+            >
+              Faster
+            </h4>
+            <p
+              class="mt-2 md:mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+            >
+              No need to write the<br class='md-lt:hidden'/>same component twice.
+            </p>
+          </div>
+          
+          <div class="w-full float-left flex flex-col items-center">
+            <img
+              class="mb-3 flex-shrink-0"
+              src="../../assets/images/icons/code-icon.svg"
+              alt=""
+            />
+            <h4
+              class="flexa-bold text-2xl md:text-[32px] leading-9 primary-gradient-text"
+            >
+              Consistent
+            </h4>
+            <p
+              class="mt-2 md:mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+            >
+              Component will look <br class='md-lt:hidden'/>and feel the same.
+            </p>
+          </div>
+          
+          <div class="w-full float-left flex flex-col items-center">
+            <img
+              class="mb-3 flex-shrink-0"
+              src="../../assets/images/icons/scalable-icon.svg"
+              alt=""
+            />
+            <h4
+              class="flexa-bold text-2xl md:text-[32px] leading-9 primary-gradient-text"
+            >
+              Scalable
+            </h4>
+            <p
+              class="mt-2 md:mt-4 zirkon-regular text-sm md:text-base text-ab-black"
+            >
+              Many teams can<br class='md-lt:hidden'/>build and work together.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-8 md:py-20">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix">
+      <div
+        class="w-full float-left grid grid-cols-1 md:grid-cols-2 items-start gap-4"
+      >
+        <div class="w-full float-left md:max-w-[480px] py-5">
+          <p
+            class="w-full float-left zirkon-medium text-xl text-ab-black tracking-wider mb-6"
+          >
+            BUILD . SHARE . GROW
+          </p>
+          <h3
+            class="w-full float-left text-xl md:text-5xl md:!leading-[54px] flexa-bold text-ab-black"
+          >
+            Built to scale.<br />
+            Fit to your needs.<br />
+            Effortlessly.
+          </h3>
+          <div
+            class="w-full float-left mt-4 zirkon-regular text-sm md:text-base text-ab-black [&>p]:mt-4"
+          >
+            <p>
+              Find applications, get inspired, or build your own apps in our
+              open-sourced app marketplace, made with Blocks.
+            </p>
+
+            <p>
+              Search and pull code you need from our Blocks store Standardized
+              applications built within an opinionated architecture.
+            </p>
+
+            <p>Build and share app templates in our community</p>
+          </div>
+          <div class="w-full float-left mt-4 md:mt-6">
+            <a
+              href="https://github.com/appblocks-hub"
+              target="_blank"
+              class="flex items-center cursor-pointer hover:no-underline space-x-4"
+            >
+              <img
+                class="flex-shrink-0"
+                src="../../assets/images/icons/github.svg"
+              />
+              <span
+                class="text-ab-black text-lg flexa-medium leading-tight pt-1"
+                >Github</span
+              >
+            </a>
+          </div>
+        </div>
+        <div class="w-full relative float-right self-end">
+          <div class="float-left relative">
+            <img
+              src="../../assets/images/icons/macbook.svg"
+              class="float-left max-w-full flex relative mb-4 md:mb-0"
+            />
+            <img
+              src="../../assets/images/icons/card-box-2.svg"
+              class="card-animation-1 float-left max-w-full absolute right-0 -top-1/3 hidden lg:flex"
+            />
+            <img
+              src="../../assets/images/icons/card-box-1.svg"
+              class="card-animation-2 float-left max-w-full absolute right-[214px] -top-1/3 hidden lg:flex"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left md-lt:py-6 md:pb-10 md:pt-16 bg-[#F5F5FF]">
+  <div class="w-full float-left">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix flex justify-center py-12 relative lg:static">
+      <div class="float-left lg:relative lg:px-40">
+        <img width="76" height="51" class="md-lt:hidden absolute left-6 lg:left-0 top-1/2 transform-gpu -translate-y-1/2" src="../../assets/images/icons/bottom-block-1.svg" alt="Block-1"/>
+        <img width="85" height="55" class="md-lt:hidden absolute left-24 lg:left-20 bottom-6 lg:-bottom-6" src="../../assets/images/icons/bottom-block-2.svg" alt="Block-2"/>
+        <img width="97" height="57" class="md-lt:hidden absolute right-2 lg:-right-4 top-1/2 transform-gpu -translate-y-1/2" src="../../assets/images/icons/bottom-block-3.svg" alt="Block-3"/>
+        <img width="85" height="55" class="md-lt:hidden absolute right-10 lg:right-10 bottom-6 lg:-bottom-6" src="../../assets/images/icons/bottom-block-4.svg" alt="Block-4"/>
+        <div
+          class="w-full float-left flex flex-col space-y-6 md:space-y-9 items-center"
+        >
+          <p
+            class="flexa-bold text-2xl md:text-5xl text-ab-black md:!leading-[56px] text-center"
+          >
+            <span>Build your Vision,<span> <br /><span class="primary-gradient-text">Block by Block!</span>
+          </p>
+          <a
+            href="https://spaces.appblocks.com/"
+            target="_blank"
+            class="flex items-center relative justify-center py-2 px-5 bg-primary rounded-full text-white flexa-medium hover:opacity-90"
+          >
+            Start Developing
+            <img
+              class="absolute -top-2.5 -right-2.5"
+              src="../../assets/images/icons/beta-sticker.svg"
+              alt="Beta"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiperBlock = new Swiper(".blocks-swiper", {
+    effect: "fade",
+    autoplay: {
+      delay: 1500,
+      speed: 1000,
+      pauseOnMouseEnter: true,
+      disableOnInteraction: false,
+    },
+    /*mousewheel: {
+            releaseOnEdges: false,
+            thresholdTime: 500,
+        },*/
+    pagination: {
+      el: ".block-slider-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return (
+          '<div class="w-[56px] h-[56px] flex justify-center items-center flex-shrink-0"><div class="' +
+          className +
+          '"><span class="flexa-medium text-white text-xs md:text-lg leading-tight pt-0.5 md:pt-1">' +
+          (index + 1 < 9 ? "0" + (index + 1) : index + 1) +
+          "</span></div></div>"
+        );
+      },
+    },
+  });
+</script>
+
+        <script>
+  function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+  function handleEmailValidation() {
+    let input = document.getElementById("email_input").value;
+    if (validateEmail(input)) {
+      document.getElementById("email_input").classList.remove("border-red-500");
+      document.getElementById("error-msg").classList.add("hidden");
+    }
+    if (input === "") {
+      document.getElementById("error-msg").innerText = "Please Enter Email ID";
+    } else {
+      document.getElementById("error-msg").innerText = "Invalid Email ID";
+    }
+  }
+
+  function handleToast() {
+    let elem = document.getElementById("succes-msg");
+    elem.classList.remove("ToastfadeIn");
+    elem.classList.add("ToastfadeOut");
+    elem.addEventListener("animationend", TaEndFunction);
+  };
+
+  function TaEndFunction() {
+    let elem = document.getElementById("succes-msg");
+    if (elem.classList.contains("ToastfadeOut")) {
+      elem.classList.add("hidden");
+      elem.classList.remove("ToastfadeOut");
+    }
+  }
+  var toastTimer;
+
+  function resetInput() {
+    clearTimeout(toastTimer);
+    let msgContainer = document.getElementById("succes-msg");
+    msgContainer.classList.remove("hidden", "ToastfadeOut");
+    msgContainer.classList.add("ToastfadeIn");
+    document.getElementById("loader").classList.add("hidden");
+    toastTimer = setTimeout(function () {
+      handleToast();
+    }, 5000);
+  }
+  var submitBtnClick = 0;
+
+  function submitForm() {
+    if (submitBtnClick === 0) {
+      submitBtnClick = 1;
+      let input = document.getElementById("email_input").value;
+      if (validateEmail(input)) {
+        document
+          .getElementById("email_input")
+          .classList.remove("border-red-500");
+        document.getElementById("error-msg").classList.add("hidden");
+        document.getElementById("error-msg").innerText = "";
+        document
+          .getElementById("email_input")
+          .classList.add("border-ab-gray-medium");
+        document.getElementById("loader").classList.remove("hidden");
+        const data = JSON.stringify({
+          email: input,
+        });
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://lead-mail.appblocks.com/add-lead", true);
+
+        //Send the proper header information along with the request
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = () => {
+          // Call a function when the state changes.
+          if (
+            (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) ||
+            true
+          ) {
+            resetInput();
+          }
+          if (xhr.readyState === 4) {
+            document.getElementById("email_input").value = "";
+            submitBtnClick = 0;
+          }
+        };
+        xhr.send(data);
+      } else {
+        submitBtnClick = 0;
+        document
+          .getElementById("email_input")
+          .classList.remove("border-ab-gray-medium");
+        document.getElementById("email_input").classList.add("border-red-500");
+        document.getElementById("error-msg").classList.remove("hidden");
+        if (input === "") {
+          document.getElementById("error-msg").innerText =
+            "Please Enter Email ID";
+        } else {
+          document.getElementById("error-msg").innerText = "Invalid Email ID";
+        }
+      }
+    }
+  }
+</script>
+
+<footer class="w-full float-left bg-primary">
+  <div class="w-full float-left bg-[url(../images/icons/block-footer-bg.svg)] bg-repeat-x bg-[left_top_-24px]">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 clearfix">
+      <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-y-5 gap-x-4 md-lt:py-8 md:pt-28 md:pb-16">
+        
+        <div class="w-full float-left">
+          <p class="w-full text-base uppercase zirkon-regular text-white mb-3 md-lt:mb-0 float-left">
+            Company
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:zirkon-medium [&>li>a]:text-white [&>li]:mt-2">
+           
+              <li>
+                <a class="hover:underline" href="/pages/about/" target="">About Us</a>
+              </li>
+            
+              <li>
+                <a class="hover:underline" href="https://store.appblocks.com/" target="_blank">Block store</a>
+              </li>
+            
+              <li>
+                <a class="hover:underline" href="/pages/contact/" target="">Contact Us</a>
+              </li>
+            
+          </ul>
+        </div>
+        
+        <div class="w-full float-left">
+          <p class="w-full text-base uppercase zirkon-regular text-white mb-3 md-lt:mb-0 float-left">
+            Legal
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:zirkon-medium [&>li>a]:text-white [&>li]:mt-2">
+           
+              <li>
+                <a class="hover:underline" href="/pages/terms-conditions-customers/" target="">Terms of use for Customers</a>
+              </li>
+            
+              <li>
+                <a class="hover:underline" href="/pages/terms-conditions-authors/" target="">Terms of use for Authors</a>
+              </li>
+            
+              <li>
+                <a class="hover:underline" href="/pages/privacy-policy/" target="">Privacy policy</a>
+              </li>
+            
+          </ul>
+        </div>
+        
+        <div class="w-full float-left">
+          <p class="w-full text-base uppercase zirkon-regular text-white mb-3 md-lt:mb-0 float-left">
+            Resources
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:zirkon-medium [&>li>a]:text-white [&>li]:mt-2">
+           
+              <li>
+                <a class="hover:underline" href="/pages/support/" target="">Help &amp; Support</a>
+              </li>
+            
+              <li>
+                <a class="hover:underline" href="https://discord.gg/b7YSVvHp2x" target="_blank">Community</a>
+              </li>
+            
+          </ul>
+        </div>
+        
+        <div class="w-full float-left hidden">
+          <p class="w-full text-base uppercase zirkon-regular text-white mb-3 md-lt:mb-0 float-left">
+            For Authors
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:zirkon-medium [&>li>a]:text-white [&>li]:mt-2">
+            <!-- <li><a>How Appblocks help</a></li> -->
+            <li>
+              <a class="hover:underline" href="/pages/terms-conditions-authors/">Terms of use for Authors</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-full float-left md:min-h-[210px]">
+          <p class="w-full text-base uppercase zirkon-regular text-white mb-3 md-lt:mb-0 float-left">
+            News Letter
+          </p>
+          <div class="w-full float-left mt-2 md:mt-3">
+            <input type="text" onkeyup="handleEmailValidation()" id="email_input" placeholder="Email ID"
+              class="zirkon-regular h-10 w-full float-left rounded border border-white text-white placeholder:text-white/50 bg-primary p-3 focus:outline-none md-lt:text-sm" />
+            <div class="float-left flex w-full">
+              <!-- <img class="max-w-[32px] mt-4 hidden" id="loader" src="../../assets/images/loading.gif"
+                                alt="Loader" /> -->
+              <p id="error-msg" class="zirkon-medium mt-2 w-full text-center text-white md:text-left hidden">
+                Please Enter valid Email ID
+              </p>
+            </div>
+            <button type="button" onclick="submitForm()"
+              class="flexa-medium flex float-left items-center justify-center rounded bg-secondary px-5 py-2 text-sm text-white hover:opacity-90 focus:outline-none md:text-base mt-3">
+              Subscribe
+              <img class="ml-2 hidden max-w-[20px]" id="loader" src="../../assets/images/loading-footer.gif"
+                alt="Loader" />
+            </button>
+            <div id="succes-msg"
+              class="fixed max-w-[640px] w-full top-0 left-1/2 transform-gpu -translate-x-1/2 p-4 z-[999] hidden">
+              <div
+                class="w-full float-left flex justify-between bg-white rounded border border-ab-green p-4 space-x-3 shadow-md">
+                <div class="flex-grow overflow-hidden flex space-x-2 sm:space-x-4">
+                  <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                      fill="#01944C" />
+                    <path
+                      d="M10.8099 14.8896C10.6799 14.8896 10.5499 14.8396 10.4599 14.7396L8.06992 12.3496C7.86992 12.1496 7.86992 11.8396 8.06992 11.6396C8.26992 11.4396 8.57992 11.4396 8.77992 11.6396L10.8099 13.6696L15.2299 9.24961C15.4299 9.04961 15.7399 9.04961 15.9399 9.24961C16.1399 9.44961 16.1399 9.75961 15.9399 9.95961L11.1699 14.7296C11.0699 14.8296 10.9399 14.8896 10.8099 14.8896Z"
+                      fill="white" />
+                  </svg>
+                  <div class="w-full float-left flex flex-col">
+                    <p class="zirkon-medium w-full float-left text-base md:text-[17px] text-ab-green">
+                      Done!
+                    </p>
+                    <p class="zirkon-medium w-full float-left text-sm md:text-[15px] text-ab-black mt-0.5">
+                      Thank you for subscribing to our Newsletter.
+                    </p>
+                  </div>
+                </div>
+                <svg id="toast-close-btn" onclick="handleToast()"
+                  class="flex-shrink-0 cursor-pointer opacity-80 hover:opacity-100" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.7894 11.9975L18.8351 5.9475C19.055 5.7275 19.055 5.3775 18.8351 5.1575C18.6253 4.9475 18.2555 4.9475 18.0457 5.1575L12 11.2075L5.95432 5.1575C5.74447 4.9475 5.37473 4.9475 5.16488 5.1575C4.94504 5.3775 4.94504 5.7275 5.16488 5.9475L11.2106 11.9975L5.16488 18.0475C4.94504 18.2675 4.94504 18.6175 5.16488 18.8375C5.37473 19.0475 5.74447 19.0475 5.95432 18.8375L12 12.7875L18.0457 18.8375C18.1556 18.9475 18.2955 18.9975 18.4354 18.9975C18.5853 18.9975 18.7252 18.9375 18.8351 18.8375C19.055 18.6175 19.055 18.2675 18.8351 18.0475L12.7894 11.9975Z"
+                    fill="#484848" fill-opacity="0.5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex w-full float-left flex-col sm:flex-row space-y-4 sm:space-y-0 justify-between items-center py-5 border-t border-ab-gray-dark">
+        <a href="/" class="float-left flex-shrink-0" aria-label="Appblock Home page"><img width="144" height="32"
+            alt="Logo" src="../../assets/images/logo-footer.svg" /></a>
+        <p class="flex-grow text-center text-sm my-1 zirkon-regular text-white px-2">
+          Copyright Ⓒ Appblocks 2023 | All rights reserved
+        </p>
+        <div class="flex justify-center items-center flex-wrap text-white space-x-2">
+          <a class="cursor-pointer my-1 group" target="_blank" aria-label="linkedin"
+            href="https://www.linkedin.com/company/89235117/admin/">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_5582_13927)">
+                <path class="group-hover:opacity-80 transition-all"
+                  d="M11.56 9.78218C11.56 10.7624 10.937 11.5644 9.77998 11.5644C8.71199 11.5644 8 10.7624 8 9.87129C8 8.89109 8.71199 8 9.77998 8C10.848 8 11.56 8.80198 11.56 9.78218Z"
+                  fill="#ffffff" />
+                <path class="group-hover:opacity-80 transition-all" d="M11.5598 12.4456H8.00977V24H11.5598V12.4456Z"
+                  fill="#ffffff" />
+                <path class="group-hover:opacity-80 transition-all"
+                  d="M20.0841 12.6238C18.2151 12.6238 17.157 13.6931 16.712 14.406H16.623L16.445 12.8911H13.251C13.251 13.8713 13.34 15.0198 13.34 16.3565V24H16.89V17.6931C16.89 17.3366 16.89 17.0693 16.979 16.802C17.246 16.1782 17.691 15.3763 18.67 15.3763C19.916 15.3763 20.45 16.4456 20.45 17.8614V23.9901H24V17.4159C23.9902 14.1287 22.2992 12.6238 20.0841 12.6238Z"
+                  fill="#ffffff" />
+              </g>
+              <defs>
+                <clipPath id="clip0_5582_13927">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a class="cursor-pointer my-1 group" target="_blank" aria-label="facebook"
+            href="https://www.facebook.com/profile.php?id=100086034980312">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_5582_13928)">
+                <path class="group-hover:opacity-80 transition-all"
+                  d="M19.4131 10.228H20.9911V7H18.6152C15.2465 7 13.6418 8.88508 13.6418 11.5709V14.1149H11V17.1844H13.6418V25H17.6046V17.1844H20.2465L21 14.1149H17.6135V12.013C17.6046 11.1622 18.1011 10.228 19.4131 10.228Z"
+                  fill="#ffffff" />
+              </g>
+              <defs>
+                <clipPath id="clip0_5582_13928">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a class="cursor-pointer my-1 group" target="_blank" aria-label="Twitter"
+            href="https://twitter.com/Appblocksapp">
+            <svg width="32" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.0415975 0L6.64178 8.82491L0 16H1.49492L7.30992 9.71796L12.0081 16H17.095L10.1233 6.67879L16.3055 0H14.8106L9.45547 5.78545L5.1285 0H0.0415975ZM2.23994 1.10103H4.57684L14.8964 14.899H12.5595L2.23994 1.10103Z" fill="white"/>
+</svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    </body>
+</html>
