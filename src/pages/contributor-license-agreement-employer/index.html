@@ -2,8 +2,7 @@
 layout: layout/layout.njk
 site_title: Appblocks - Contributor License Agreement
 ---
-<!-- <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css"> -->
-
+<link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
 {% import 'partials/banner.njk' as banner %}
 <div class="min-h-[calc(100vh-208px)] w-full float-left pt-[72px] md:pt-[80px]">
   {{
@@ -226,33 +225,50 @@ site_title: Appblocks - Contributor License Agreement
             <form
               class="w-full float-left space-y-4 mt-4 rounded-lg bg-[#f8f6fd] p-6 shadow-[0_4px_100px_1px_rgba(0,0,0,0.02)]">
               <p class="text-base zirkon-medium text-ab-black">
-                I have sole ownership of intellectual property rights to my
-                Submissions and I am not making Submissions in the course of
-                work for my employer.
+                I am making Submissions in the course of work for my employer
+                (or my employer has intellectual property rights in my
+                Submissions by contract or applicable law). I have permission
+                from my employer to make Submissions and enter into this
+                Agreement on behalf of my employer. By signing below, the
+                defined term “You” includes me and my employer.
               </p>
               <div class="w-full float-left">
                 <div class="contact-frm-col w-full float-left flex flex-col">
-                  <label class="text-xs zirkon-medium text-ab-black mb-1.5">Full Name</label>
-                  <input id="cla-self-fullname" class="contact-input" type="text" placeholder="Eg. John Jacob" />
+                  <label class="text-xs zirkon-medium text-ab-black mb-1.5">Company Name</label>
+                  <input id="cla-employer-company" class="contact-input" type="text"
+                    placeholder="Eg. ABCD Technologies" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
               <!-- <div class="w-full float-left flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
                 <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Signature</label>
-                  <input class="contact-input" type="text" placeholder="" />
+                  <input id="cla-employer-sign" class="contact-input" type="text" placeholder="" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
                 <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Date</label>
-                  <input class="contact-input date-input !pr-11" readonly type="text" placeholder="dd/mm/yyyy" />
+                  <input id="cla-employer-date" class="contact-input date-input !pr-11" type="text"
+                    placeholder="dd/mm/yyyy" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div> -->
+              <div class="w-full float-left flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+                <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
+                  <label class="text-xs zirkon-medium text-ab-black mb-1.5">Signed by</label>
+                  <input id="cla-employer-signedby" class="contact-input" type="text" placeholder="" />
+                  <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
+                </div>
+                <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
+                  <label class="text-xs zirkon-medium text-ab-black mb-1.5">Title</label>
+                  <input id="cla-employer-title" class="contact-input" type="text" />
+                  <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
+                </div>
+              </div>
               <!-- <div class="w-full float-left">
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">GitHub Login</label>
-                  <input id="cla-self-github" class="contact-input" type="text" placeholder="Eg. username@github" />
+                  <input id="cla-employer-github" class="contact-input" type="text" placeholder="Eg. username@github" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div> -->
@@ -260,8 +276,8 @@ site_title: Appblocks - Contributor License Agreement
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Work email <span
                       class="text-[#D25348]">*</span></label>
-                  <input id="cla-self-email" onkeyup="resetError('cla-self-email')" class="contact-input" type="text"
-                    placeholder="Eg. username@domain.com" />
+                  <input id="cla-employer-email" onkeyup="resetError('cla-employer-email')" class="contact-input"
+                    type="text" placeholder="Eg. username@domain.com" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
@@ -269,8 +285,8 @@ site_title: Appblocks - Contributor License Agreement
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Address <span
                       class="text-[#D25348]">*</span></label>
-                  <textarea id="cla-self-address" onkeyup="resetError('cla-self-address')" class="contact-txtarea"
-                    placeholder="Type address"></textarea>
+                  <textarea id="cla-employer-address" onkeyup="resetError('cla-employer-address')"
+                    class="contact-txtarea" placeholder="Type address"></textarea>
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
@@ -347,7 +363,7 @@ site_title: Appblocks - Contributor License Agreement
   //   customDays: ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'],
   //   customMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   // })
-  // picker.calendarContainer.style.setProperty('font-size', '13px');
+  // picker.calendarContainer.style.setProperty('font-size', '13px')
 
   function validateEmail(email) {
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -372,10 +388,12 @@ site_title: Appblocks - Contributor License Agreement
 
   function resetInput() {
     clearTimeout(toastTimer);
-    document.getElementById("cla-self-email").value = "";
-    document.getElementById("cla-self-address").value = "";
-    document.getElementById("cla-self-fullname").value = "";
-    // document.getElementById("cla-self-github").value = "";
+    document.getElementById("cla-employer-email").value = "";
+    document.getElementById("cla-employer-address").value = "";
+    document.getElementById("cla-employer-company").value = "";
+    document.getElementById("cla-employer-title").value = "";
+    document.getElementById("cla-employer-signedby").value = "";
+    // document.getElementById("cla-employer-github").value = "";
     let msgContainer = document.getElementById("succes-msg");
     msgContainer.classList.remove("hidden", "ToastfadeOut");
     msgContainer.classList.add("ToastfadeIn");
@@ -411,25 +429,27 @@ site_title: Appblocks - Contributor License Agreement
 
     if (submitBtnClick === 0) {
       submitBtnClick = 1;
-      const cla_self_email = document.getElementById("cla-self-email").value.trim();
-      const cla_self_address = document.getElementById("cla-self-address").value.trim();
-      // let cla_self_github = document.getElementById("cla-self-github").value.trim();
-      const cla_self_fullname = document.getElementById("cla-self-fullname").value.trim();
-      if (cla_self_email === "") {
-        handleError("cla-self-email", "Please Enter Email ID");
+      const cla_employer_email = document.getElementById("cla-employer-email").value.trim();
+      const cla_employer_address = document.getElementById("cla-employer-address").value.trim();
+      // let cla_employer_github = document.getElementById("cla-employer-github").value.trim();
+      const cla_employer_company = document.getElementById("cla-employer-company").value.trim();
+      const cla_employer_title = document.getElementById("cla-employer-title").value.trim();
+      const cla_employer_signedby = document.getElementById("cla-employer-signedby").value.trim();
+      if (cla_employer_email === "") {
+        handleError("cla-employer-email", "Please Enter Email ID");
         formStatus = false;
-      } else if (!validateEmail(cla_self_email)) {
-        handleError("cla-self-email", "Please Enter Valid ID");
+      } else if (!validateEmail(cla_employer_email)) {
+        handleError("cla-employer-email", "Please Enter Valid ID");
         formStatus = false;
       } else {
-        resetError("cla-self-email");
+        resetError("cla-employer-email");
       }
 
-      if (cla_self_address === "") {
-        handleError("cla-self-address", "Please Enter Address");
+      if (cla_employer_address === "") {
+        handleError("cla-employer-address", "Please Enter Address");
         formStatus = false;
       } else {
-        resetError("cla-self-address");
+        resetError("cla-employer-address");
       }
 
       if (formStatus) {
@@ -438,12 +458,15 @@ site_title: Appblocks - Contributor License Agreement
 
         // Create an object with the data to send to the API
         const formData = {
-          kind: "individual",
+          kind: cla_employer_company || "Company",
           github_login: "Empty",
-          full_name: cla_self_fullname,
-          work_email: cla_self_email,
-          address: cla_self_address,
+          work_email: cla_employer_email,
+          address: cla_employer_address,
+          title: cla_employer_title,
+          company_name: cla_employer_company,
+          signed_by: cla_employer_signedby,
         };
+
 
         // Make the API call
 

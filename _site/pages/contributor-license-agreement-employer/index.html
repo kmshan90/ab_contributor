@@ -312,46 +312,49 @@
               <div class="w-full float-left">
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Company Name</label>
-                  <input id="contact-email" class="contact-input" type="text" placeholder="Eg. ABCD Technologies" />
+                  <input id="cla-employer-company" class="contact-input" type="text"
+                    placeholder="Eg. ABCD Technologies" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
-              <div class="w-full float-left flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+              <!-- <div class="w-full float-left flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
                 <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Signature</label>
-                  <input class="contact-input" type="text" placeholder="" />
+                  <input id="cla-employer-sign" class="contact-input" type="text" placeholder="" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
                 <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Date</label>
-                  <input class="contact-input date-input !pr-11" type="text" placeholder="dd/mm/yyyy" />
+                  <input id="cla-employer-date" class="contact-input date-input !pr-11" type="text"
+                    placeholder="dd/mm/yyyy" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="w-full float-left flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
                 <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Signed by</label>
-                  <input class="contact-input" type="text" placeholder="" />
+                  <input id="cla-employer-signedby" class="contact-input" type="text" placeholder="" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
                 <div class="contact-frm-col w-full lg:w-1/2 float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Title</label>
-                  <input class="contact-input" type="text" />
+                  <input id="cla-employer-title" class="contact-input" type="text" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
-              <div class="w-full float-left">
+              <!-- <div class="w-full float-left">
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">GitHub Login</label>
-                  <input id="contact-email" class="contact-input" type="text" placeholder="Eg. username@github" />
+                  <input id="cla-employer-github" class="contact-input" type="text" placeholder="Eg. username@github" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="w-full float-left">
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Work email <span
                       class="text-[#D25348]">*</span></label>
-                  <input id="contact-email" class="contact-input" type="text" placeholder="Eg. username@domain.com" />
+                  <input id="cla-employer-email" onkeyup="resetError('cla-employer-email')" class="contact-input"
+                    type="text" placeholder="Eg. username@domain.com" />
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
@@ -359,7 +362,8 @@
                 <div class="contact-frm-col w-full float-left flex flex-col">
                   <label class="text-xs zirkon-medium text-ab-black mb-1.5">Address <span
                       class="text-[#D25348]">*</span></label>
-                  <textarea id="contact-message" class="contact-txtarea" placeholder="Type address"></textarea>
+                  <textarea id="cla-employer-address" onkeyup="resetError('cla-employer-address')"
+                    class="contact-txtarea" placeholder="Type address"></textarea>
                   <span class="error-msg text-[#D25348] text-xs zirkon-medium mt-1.5"></span>
                 </div>
               </div>
@@ -378,9 +382,11 @@
                   class="float-left my-2 py-2 px-6 mr-3 text-base flexa-medium text-center text-primary rounded-full border border-primary hover:opacity-90 focus:outline-none">
                   Cancel
                 </a>
-                <button type="button" onclick="handleEmployerFrm()"
-                  class="float-left my-2 py-2 px-6 text-base flexa-medium text-center text-white rounded-full bg-primary hover:opacity-90 focus:outline-none">
+                <button type="button" onclick="submitForm()"
+                  class="float-left flex items-center my-2 py-2 px-6 text-base flexa-medium text-center text-white rounded-full bg-primary hover:opacity-90 focus:outline-none">
                   Submit
+                  <img class="ml-2 hidden max-w-[20px]" id="loader" src="../../assets/images/loading-footer.gif"
+                    alt="Loader" />
                 </button>
               </div>
             </form>
@@ -445,18 +451,184 @@
     </div>
   </section>
 </div>
-<script src="https://unpkg.com/js-datepicker"></script>
+<div id="succes-msg"
+  class="fixed max-w-[640px] w-full top-0 left-1/2 transform-gpu -translate-x-1/2 p-4 z-[999] hidden">
+  <div class="w-full float-left flex justify-between bg-white rounded border border-ab-green p-4 space-x-3 shadow-md">
+    <div class="flex-grow overflow-hidden flex space-x-2 sm:space-x-4">
+      <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+          fill="#01944C" />
+        <path
+          d="M10.8099 14.8896C10.6799 14.8896 10.5499 14.8396 10.4599 14.7396L8.06992 12.3496C7.86992 12.1496 7.86992 11.8396 8.06992 11.6396C8.26992 11.4396 8.57992 11.4396 8.77992 11.6396L10.8099 13.6696L15.2299 9.24961C15.4299 9.04961 15.7399 9.04961 15.9399 9.24961C16.1399 9.44961 16.1399 9.75961 15.9399 9.95961L11.1699 14.7296C11.0699 14.8296 10.9399 14.8896 10.8099 14.8896Z"
+          fill="white" />
+      </svg>
+      <div class="w-full float-left flex flex-col">
+        <p class="zirkon-medium w-full float-left text-base md:text-[17px] text-ab-green">
+          Done!
+        </p>
+        <p class="zirkon-medium w-full float-left text-sm md:text-[15px] text-ab-black mt-0.5">
+          Thank you for submitting.
+        </p>
+      </div>
+    </div>
+    <svg id="toast-close-btn" onclick="handleToast()" class="flex-shrink-0 cursor-pointer opacity-80 hover:opacity-100"
+      width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12.7894 11.9975L18.8351 5.9475C19.055 5.7275 19.055 5.3775 18.8351 5.1575C18.6253 4.9475 18.2555 4.9475 18.0457 5.1575L12 11.2075L5.95432 5.1575C5.74447 4.9475 5.37473 4.9475 5.16488 5.1575C4.94504 5.3775 4.94504 5.7275 5.16488 5.9475L11.2106 11.9975L5.16488 18.0475C4.94504 18.2675 4.94504 18.6175 5.16488 18.8375C5.37473 19.0475 5.74447 19.0475 5.95432 18.8375L12 12.7875L18.0457 18.8375C18.1556 18.9475 18.2955 18.9975 18.4354 18.9975C18.5853 18.9975 18.7252 18.9375 18.8351 18.8375C19.055 18.6175 19.055 18.2675 18.8351 18.0475L12.7894 11.9975Z"
+        fill="#484848" fill-opacity="0.5" />
+    </svg>
+  </div>
+</div>
+<!-- <script src="https://unpkg.com/js-datepicker"></script> -->
 <script>
-  const picker = datepicker('.date-input', {
-    dateSelected: new Date(),
-    formatter: (input, date, instance) => {
-      const value = date.toLocaleDateString()
-      input.value = value
-    },
-    customDays: ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'],
-    customMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  })
-  picker.calendarContainer.style.setProperty('font-size', '13px')
+  // const picker = datepicker('.date-input', {
+  //   dateSelected: new Date(),
+  //   formatter: (input, date, instance) => {
+  //     const value = date.toLocaleDateString()
+  //     input.value = value
+  //   },
+  //   customDays: ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'],
+  //   customMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  // })
+  // picker.calendarContainer.style.setProperty('font-size', '13px')
+
+  function validateEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+
+  function handleToast() {
+    let elem = document.getElementById("succes-msg");
+    elem.classList.remove("ToastfadeIn");
+    elem.classList.add("ToastfadeOut");
+    elem.addEventListener("animationend", TaEndFunction);
+  };
+
+  function TaEndFunction() {
+    let elem = document.getElementById("succes-msg");
+    if (elem.classList.contains("ToastfadeOut")) {
+      elem.classList.add("hidden");
+      elem.classList.remove("ToastfadeOut");
+    }
+  }
+  var toastTimer;
+
+  function resetInput() {
+    clearTimeout(toastTimer);
+    document.getElementById("cla-employer-email").value = "";
+    document.getElementById("cla-employer-address").value = "";
+    document.getElementById("cla-employer-company").value = "";
+    document.getElementById("cla-employer-title").value = "";
+    document.getElementById("cla-employer-signedby").value = "";
+    // document.getElementById("cla-employer-github").value = "";
+    let msgContainer = document.getElementById("succes-msg");
+    msgContainer.classList.remove("hidden", "ToastfadeOut");
+    msgContainer.classList.add("ToastfadeIn");
+    document.getElementById("loader").classList.add("hidden");
+    toastTimer = setTimeout(function () {
+      handleToast();
+      submitBtnClick = 0;
+    }, 5000);
+  }
+
+  var submitBtnClick = 0;
+
+  function resetError(elm) {
+    let parentElm = document.getElementById(elm).closest(".contact-frm-col");
+    if (parentElm.classList.contains("has-error")) {
+      parentElm.classList.remove("has-error");
+    }
+    parentElm.querySelector('.error-msg').innerText = "";
+  }
+
+  function handleError(elm, msg) {
+    let parentElm = document.getElementById(elm).closest(".contact-frm-col");
+    if (!parentElm.classList.contains("has-error")) {
+      parentElm.classList.add("has-error");
+    }
+    parentElm.querySelector('.error-msg').innerText = msg;
+  }
+
+  const CLA_HOST = "https://cla-api.appblocks.com";
+
+  function submitForm() {
+    var formStatus = true;
+
+    if (submitBtnClick === 0) {
+      submitBtnClick = 1;
+      const cla_employer_email = document.getElementById("cla-employer-email").value.trim();
+      const cla_employer_address = document.getElementById("cla-employer-address").value.trim();
+      // let cla_employer_github = document.getElementById("cla-employer-github").value.trim();
+      const cla_employer_company = document.getElementById("cla-employer-company").value.trim();
+      const cla_employer_title = document.getElementById("cla-employer-title").value.trim();
+      const cla_employer_signedby = document.getElementById("cla-employer-signedby").value.trim();
+      if (cla_employer_email === "") {
+        handleError("cla-employer-email", "Please Enter Email ID");
+        formStatus = false;
+      } else if (!validateEmail(cla_employer_email)) {
+        handleError("cla-employer-email", "Please Enter Valid ID");
+        formStatus = false;
+      } else {
+        resetError("cla-employer-email");
+      }
+
+      if (cla_employer_address === "") {
+        handleError("cla-employer-address", "Please Enter Address");
+        formStatus = false;
+      } else {
+        resetError("cla-employer-address");
+      }
+
+      if (formStatus) {
+        // Display loader while making the API call
+        document.getElementById("loader").classList.remove("hidden");
+
+        // Create an object with the data to send to the API
+        const formData = {
+          kind: cla_employer_company || "Company",
+          github_login: "Empty",
+          work_email: cla_employer_email,
+          address: cla_employer_address,
+          title: cla_employer_title,
+          company_name: cla_employer_company,
+          signed_by: cla_employer_signedby,
+        };
+
+
+        // Make the API call
+
+        fetch(`${CLA_HOST}/save`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+            resetInput(); // Reset the form and show success message
+          })
+          .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            // Handle the error and possibly show an error message to the user
+            submitBtnClick = 0;
+            document.getElementById("loader").classList.add("hidden");
+          });
+
+      } else {
+        submitBtnClick = 0;
+      }
+
+    }
+  }
 </script>
     </body>
 </html>

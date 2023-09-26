@@ -533,15 +533,17 @@
     parentElm.querySelector('.error-msg').innerText = msg;
   }
 
+  const CLA_HOST = "https://cla-api.appblocks.com";
+
   function submitForm() {
     var formStatus = true;
 
     if (submitBtnClick === 0) {
       submitBtnClick = 1;
-      let cla_self_email = document.getElementById("cla-self-email").value.trim();
-      let cla_self_address = document.getElementById("cla-self-address").value.trim();
+      const cla_self_email = document.getElementById("cla-self-email").value.trim();
+      const cla_self_address = document.getElementById("cla-self-address").value.trim();
       // let cla_self_github = document.getElementById("cla-self-github").value.trim();
-      let cla_self_fullname = document.getElementById("cla-self-fullname").value.trim();
+      const cla_self_fullname = document.getElementById("cla-self-fullname").value.trim();
       if (cla_self_email === "") {
         handleError("cla-self-email", "Please Enter Email ID");
         formStatus = false;
@@ -565,14 +567,16 @@
 
         // Create an object with the data to send to the API
         const formData = {
+          kind: "individual",
+          github_login: "Empty",
+          full_name: cla_self_fullname,
           work_email: cla_self_email,
           address: cla_self_address,
-          // github_login: cla_self_github,
-          full_name: cla_self_fullname,
         };
 
         // Make the API call
-        fetch('https://cla-api.appblocks.com/save', {
+
+        fetch(`${CLA_HOST}/save`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -595,6 +599,7 @@
             submitBtnClick = 0;
             document.getElementById("loader").classList.add("hidden");
           });
+
       } else {
         submitBtnClick = 0;
       }
