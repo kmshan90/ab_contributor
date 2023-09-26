@@ -1,0 +1,87 @@
+[
+    {
+        "banner":
+        [
+            { 
+                "title": "Build web applications",
+                "desc": "the world can build upon, Block by Block!"
+            }
+        ],
+        "appblocks_info":
+        [
+            { 
+                "title": "What are blocks?",
+                "desc": "A unit of an app which solves a business use case with <br/>it’s code and contract",
+                "list":[
+                    {
+                        "icon":"",
+                        "details": "Reusing common business use cases in the same or multiple apps happens when building applications. A block is the basic unit of an app that solves a business use case."
+                    },
+                    {
+                        "icon":"",
+                        "details": "From a developer's perspective, a block encases any specific functionality. Building a block or reusing it is as easy as writing an ordinary function."
+                    },
+                    {
+                        "icon":"",
+                        "details": "Each block has a type for the kind of functionality it performs. The block types are UI Blocks (UI-Element Blocks and UI-Container Blocks), Function Blocks, Shared Blocks and Package Blocks."
+                    }
+                ]
+            }
+        ],
+        "why_appblocks":
+        [
+            {
+                "title": "Composable Enterprise via Composable Software",
+                "desc": "Using interchangeable building blocks to create, innovate and adapt business operations, <br/>enabling us to respond to external or internal factors.",
+                "list":[
+                    {
+                        "icon_url": "../../assets/images/icons/faster-icon.svg",
+                        "list_title":"Faster",
+                        "details": "No need to write the<br class='md-lt:hidden'/>same component twice."
+                    },
+                    {
+                        "icon_url": "../../assets/images/icons/code-icon.svg",
+                        "list_title":"Consistent",
+                        "details": "Component will look <br class='md-lt:hidden'/>and feel the same."
+                    },
+                    {
+                        "icon_url": "../../assets/images/icons/scalable-icon.svg",
+                        "list_title":"Scalable",
+                        "details": "Many teams can<br class='md-lt:hidden'/>build and work together."
+                    } 
+                ]
+            }
+        ],
+        "types_of_blocks":
+        [
+            {
+                "title": "TYPES OF BLOCKS",
+                "sub_title": "Blocks come in <br />all <span class='primary-gradient-text'>shapes</span> and <span class='text-primary'>sizes</span>",
+                "desc": "There’s always a block to play around with. Code away in an opinionated architecture, block by block, and improve the functionality of your app with ease."
+            }
+        ],
+        "block_slider":
+        [
+            {
+                "title": "UI Block",
+                "desc": " UI Block is a frontend Block developed for browser runtimes. It includes UI Elements, which are reusable UI components, and Container Blocks, which orchestrate the elements and handle routing and layout. UI Blocks are React-based and follow Webpack Module Federation. Container Blocks pull and render remote element Blocks, combining bundles from remote servers at runtime to render the app.",
+                "img_url": "../../assets/images/icons/ui-block.svg"
+            },
+            {
+                "title": "Function Block",
+                "desc": "Fn Blocks are the backend API Blocks. Each of these blocks is supposed to be mutually exclusive.<br /> Every Fn Block will have a specific URL to invoke it and in practical scenarios, all the Fn Blocks in an app will be stitched together and run in a single instance on the server.",
+                "img_url": "../../assets/images/icons/fn-block.svg"
+            },
+            {
+                "title": "Shared Block",
+                "desc": "In both frontend and backend, there can be some pieces of code that may be shared which are most probably for utility methods or for data models. Eg, function to find the age of a person from dob/ date filter and so on. These blocks are called Shared Blocks.",
+                "img_url": "../../assets/images/icons/shared-block.svg"
+            },
+            {
+                "title": "Package Block",
+                "desc": "When multiple blocks are combined together into a unit, such an arrangement is called a Package Block. UI, Fn, and shared Blocks have their own repositories. They are the building blocks of an application. Once all the Blocks are stitched together, we build a configuration that is a snapshot of how the apps are composed.",
+                "img_url": "../../assets/images/icons/package-block.svg"
+            }
+        ]
+    }
+]

@@ -1,0 +1,173 @@
+.clearfix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+}
+a{
+  &:focus{
+    outline: none !important;
+  }
+}
+#nav-header{
+    @media(max-width: 768px){
+        .nav-menu-wrapper{
+          height: 0px;
+          transition: all 0.3s ease-in-out;
+        }
+       .hamburger-icon{
+          width: 20px;
+          height: 2px;
+          background-color: #24292E;
+          display: block;
+          position: relative;
+          transition: 0.3s;
+          &:before {
+              content: "";
+              width: 20px;
+              height: 2px;
+              position: absolute;
+              bottom: 8px;
+              left: 0;
+              background-color: #24292E;
+              transition: 0.3s;
+          }
+          &:after {
+              content: "";
+              width: 20px;
+              height: 2px;
+              position: absolute;
+              top: 8px;
+              left: 0;
+              background-color: #24292E;
+              transition: 0.3s;
+          }
+      }
+      &.expanded-nav{
+        background-color: #fff !important;
+        z-index: 99 !important;
+          .nav-menu-wrapper{
+              height: 320px;
+              height: calc(100vh - 74px);
+              padding-top: 16px;
+              padding-bottom: 8px;
+          }
+          .hamburger-icon{
+              background-color: transparent;
+              &:before {
+                  transform: rotate(45deg);
+                  bottom: 0;
+              }
+              &:after {
+                  transform: rotate(-45deg);
+                  top: 0;
+              }
+          }
+      }
+    }
+  }
+
+.banner-right-icon{
+  background: url(../images/icons/banner-right-icon.svg) no-repeat bottom right;
+}
+.banner-right-icon-top{
+  background: url(../images/icons/banner-right-icon.svg) no-repeat top -40px right;
+}
+.banner-right-icon-block{
+  background: url(../images/icons/banner-right-icon-block.svg) no-repeat bottom right;
+}
+.banner-right-icon-bottom{
+  background: url(../images/icons/banner-right-icon-new.svg) no-repeat bottom right;
+}
+.search-input{
+  background: url(../images/icons/search-icon.svg) no-repeat center right 16px;
+}
+.search-input-white{
+  background: url(../images/icons/search-icon.svg) no-repeat center right 16px #fff;
+}
+.view-more-container{
+  max-height: 0px;
+}
+.active-view-more-btn{
+  svg{
+    transform-origin: center;
+    transform: rotate(180deg);
+  }
+}
+.contact-form-wrapper{
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.error-msg{
+  display: none;
+}
+.has-error{
+  textarea, input{
+    border-color: #D25348;
+  }
+  .error-msg{
+    display: inline !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.ToastfadeIn {
+  animation: fadeIn 0.3s linear forwards;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+.ToastfadeOut {
+  animation: fadeOut 0.3s linear forwards;
+}
+
+.date-input{
+  background: url(../images/icons/date-icon.svg) no-repeat center right 16px #fff;
+}
+
+.qs-datepicker-container{
+  border: 1px solid #e400b8 !important;
+  .qs-controls{
+    background-color: #e400b8 !important;
+    color: #fff !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  .qs-arrow.qs-right:after {
+    border-left-color: #fff !important;
+  }
+  .qs-arrow.qs-left:after {
+    border-right-color: #fff !important;
+  }
+  .qs-active, .qs-range-end, .qs-range-start {
+    background: rgb(94,94,221) !important;
+    color: #fff !important;
+  }
+  .qs-current {
+    text-decoration: none !important;
+  }
+  .qs-month-year{
+    text-transform: uppercase;
+  }
+  .qs-day{font-weight: 500 !important;}
+  .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+    background: rgba(94,94,221,0.4) !important;
+  }
+}
