@@ -586,8 +586,10 @@
         document.getElementById("loader").classList.remove("hidden");
 
         // Create an object with the data to send to the API
+
+
         const formData = {
-          kind: cla_employer_company || "Company",
+          kind: cla_employer_company,
           github_login: "Empty",
           work_email: cla_employer_email,
           address: cla_employer_address,
